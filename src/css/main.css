@@ -1,9 +1,12 @@
 .clearfix:after{
-	content: ".";
+	content: " ";
 	display: table;
 }
 .clearfix:after{
 	clear: both;
+}
+body{
+  font-size: 1rem;
 }
 ul,li{
 	padding: 0;
@@ -14,17 +17,16 @@ a{
 	color:#fff;
 }
 a:hover{
-	text-decoration: underline;
-	color:#fff;
+  color:#b3d4fc;
 }
-
 html{
    font-size: 62.5%;
 }
 nav.top{
    line-height: 3rem;
    height: 3rem;
-   background-color: #555;   
+   background-color: #555;
+  border-bottom: 1px solid #ccc000;   
 }
 nav.top .tel{
     float: left;
@@ -47,31 +49,243 @@ nav.top ul li a{
     padding: 0 1.5rem;
 }
 nav.main{
-	line-height: 66px;
-    height: 66px;
+  line-height: 66px;
+  height: 66px;
 }
 nav.main .brand {
-	float: left;
-    margin-top: 1rem;
-    margin-left: 2rem;
-
-}
-nav.main .brand img{
-	width: 150px;
-	height: 35px;
+	 float: left;
+   padding:1rem 1.5rem 0;
+   line-height: 51px;
+   height: 51px;
 }
 nav.main ul{
    	text-align: right;
+    font-size: 0;
+    height: 100%;
 }
 nav.main ul li{
     display: inline-block;
     border-left: 1px solid #f0ede9;
+    height: 100%;
 }
 nav.main ul li a{
     font-size: 1.6rem;
     color: rgba(82, 72, 72, 0.92);
     margin: 0 2.5rem;
+    font-weight: bold;
+    line-height: 5.5rem;
+    display: inline-block;
+    padding:0 30px;
+    margin: 0;
 }
-nav.main ul li a{
-  
+nav.main ul li a:hover{
+   text-decoration: none;
+   color:orange;
+   background-color: rgba(0,0,0,0.04);
 }
+/*主要内容*/
+
+/*交易栏*/
+.transaction{
+   background-color: #7c7365;
+   width: 100%;
+   display: block;
+}
+.trans-content{
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+.trans-data{
+  float: left;
+  padding: 1rem;
+  text-align: left;
+}
+.trans-data span{
+  color:#fff;
+  line-height: 3rem;
+  font-size: 1.6rem;
+}
+.trans-report{
+  text-align: right;
+}
+.trans-report a{
+  display: inline-block;
+  padding: 1rem;
+  line-height: 3rem;
+  color: #fff;
+}
+.trans-data span.trans-money {
+    margin: 0 12px;
+    padding: 6px 15px;
+    border-radius: 6%;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    background: #fff;
+    color: orange;
+    box-shadow: 1px 2px 1px #333 inset;
+}
+.ad{
+  display: none;
+}
+/*产品特征*/
+.feature{
+  width: 90%;
+  margin: 2rem auto;
+  font-size: 0;
+}
+.feature .item{
+  box-sizing: border-box;
+    display: inline-block;
+    width: calc((100% - 3rem)/3);
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+.feature .item+.item{
+  margin-left: 1.5rem;
+ } 
+.feature .item h3{
+   font-size: 3.5rem;
+    width: 35%;
+    float: left;
+    color: orange;
+    font-weight: 600;
+    margin-top: 0%;
+    margin-left: 11%;
+}
+.feature .item p{
+    font-size: 1.5rem;
+    width: 45%;
+    line-height: 1.6;
+    float: right;
+    color: #ccc;
+    margin: 0;
+}
+/*公告*/
+.notice{
+  width: 90%;
+  margin:1rem auto;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  background-color: #fff;
+  box-shadow: 0 0 4px #ccc;
+}
+.notice a{
+  float:left;
+}
+.notice a:first-child{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+   width: 70%;
+   margin-left: 3rem;
+   color:#ccc;
+}
+.notice a:first-child:hover{
+   color:#b3d4fc;
+}
+.notice a:first-child span{
+   color:#aaa;
+}
+.notice a:first-child:hover span{
+  color:#aaa;
+ }
+.notice a:first-child:before{
+  content: "最新公告：\00a0\00a0";
+  /*在结构外增加内容，content中是不可以用&nbsp; 
+  只可以用\00a0表示空格*/
+  color:#aaa;
+ } 
+.notice a.more{
+  float:right;
+  color:orange;
+  margin-right: 3rem;
+  }
+
+/*产品详情*/
+.product{
+ width:90%;
+  margin: 2rem auto;
+  border-top: 2px solid #ff9900;
+  box-shadow: 0 0 4px #ccc;
+  background-color: #f5f9fa;
+  font-size: 1.4rem;  
+}
+.product h2{
+  float: left;
+    width: 20%;
+    margin: 3rem 0 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgba(117, 117, 117, 0.81);
+}
+.product h2 em{
+   display: block;
+    font-size: 1.6rem;
+    margin-top: 1.4rem;
+}
+.product h2 em:first-child{
+  margin-top: 3rem;
+}
+.product-content{
+  margin-left: 20%;
+  border-left: 1px solid #eee;
+}
+.product-content .item {
+  display: block;
+    min-height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    
+}
+.product-content .item +.item{
+    border-top: 1px solid #eee;
+ } 
+.product-content .item *{
+  display: inline-block;
+}
+.product-content .item h3{
+  width: 30%;
+    font-size: 1.5rem;
+    color: rgba(51, 51, 51, 0.58);
+}
+.product-content .item h3 em{
+   font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    color: #8b999d;
+    margin-right: 0.5rem
+}
+.product-content  .item .info{
+  width: 48%;
+    padding: 1rem;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+.product-content  .item .info p{
+    margin: 1rem 0;
+    display: inline-block;
+    width: 56%;
+ } 
+.product-content  .item .info p:last-child{
+  width: 40%;
+}
+.product-content  .item .info span{
+      display: block;
+    font-size: 2.4rem;
+    color: #ff9900;
+}
+.product-content  .item .info span i{
+  font-size: 1.2rem;
+    font-style: normal;
+    color: #999;
+}
+.product-content  .item .info .year-rate i{
+}
+.product-content  .item .info .money{
+}
+.product-content  .item .buy{
+  width: calc(22% - 4.4rem);
+}
+
+
